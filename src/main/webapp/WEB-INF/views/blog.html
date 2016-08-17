@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Blog project</title>
+    <link href="../../resources/libraries/bootstrap/dist/css/bootstrap.css"  th:href="@{/resources/libraries/bootstrap/dist/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+  	<link href="../../resources/css/index.css" th:href="@{/resources/css/index.css}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  	<div class="container">
+  		<div id="blog" class="row">
+			<div class="col-sm-4 ">
+          		<nav class="nav-sidebar">
+              		<ul class="nav">
+              			<li class="active"><a href="#" id="new_post_id"><span class="glyphicon glyphicon-star"></span> New post</a></li>             
+             			<li class="nav-divider"></li>
+            		</ul>
+          		</nav>
+        	</div>
+        	
+       	  	<div class="col-sm-8">
+       	  	<!--begin:  news  -->
+          		<div class="col-md-10 blogShort">
+            		<h1>Title 1</h1>
+            		<!--<em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>-->
+            		<article><p>
+			            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+			            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+			            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+			            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+			            Lorem Ipsum.
+            		</p></article>
+            		<div class="row">
+              			<div class="span8">
+                			<p></p>
+                			<p>
+                  				<i class="glyphicon glyphicon-user"></i> by <b>Mark</b>
+                  			     | 
+                  			  	<i class="glyphicon glyphicon-calendar"></i> 2012-08-02 20:47:04
+                  				 | 
+                  				<i class="glyphicon glyphicon-comment"></i> 3 Comments
+                			</p>
+              			</div>
+            		</div>
+            		<a class="btn btn-blog pull-right marginBottom10" href="#" id="btn_see_post_1_id">READ MORE</a>
+          		</div>
+          		
+          		<div class="col-md-10 blogShort">
+            		<h1>Title 2</h1>
+            		<!--<em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>-->
+            		<article><p>
+			            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+			            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+			            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+			            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+			            Lorem Ipsum.
+            		</p></article>
+            		<div class="row">
+              			<div class="span8">
+                			<p></p>
+                			<p>
+                  				<i class="glyphicon glyphicon-user"></i> by <b>Mark</b>
+                  			     | 
+                  			  	<i class="glyphicon glyphicon-calendar"></i> 2012-08-02 20:47:04
+                  				 | 
+                  				<i class="glyphicon glyphicon-comment"></i> 2Comments
+                			</p>
+              			</div>
+            		</div>
+            		<a class="btn btn-blog pull-right marginBottom10" href="#" id="btn_see_post_1_id">READ MORE</a>
+          		</div>
+          		
+          		<div class="col-md-10 blogShort">
+            		<h1>Title 3</h1>
+            		<!--<em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>-->
+            		<article><p>
+			            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+			            ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+			            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+			            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+			            Lorem Ipsum.
+            		</p></article>
+            		<div class="row">
+              			<div class="span8">
+                			<p></p>
+                			<p>
+                  				<i class="glyphicon glyphicon-user"></i> by <b>Mark</b>
+                  			     | 
+                  			  	<i class="glyphicon glyphicon-calendar"></i> 2012-08-02 20:47:04
+                  				 | 
+                  				<i class="glyphicon glyphicon-comment"></i> 0 Comments
+                			</p>
+              			</div>
+            		</div>
+            		<a class="btn btn-blog pull-right marginBottom10" href="#" id="btn_see_post_1_id">READ MORE</a>
+          		</div>
+
+          	 <!--end:  news  -->		
+       		 </div>
+        	
+        	
+  		</div>
+  	</div>
+  	
+  	
+  <!-- begin: modal  to  see a post-->
+  <div id="modal_see_post_id" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content container-fluid">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" id="post-title-id">
+          		<!-- Post Title -->
+          </h3>
+        </div>
+        
+        <hr></hr>
+        <p> by <span id="post-author-name"><b> </b></span>   |   <span class="glyphicon glyphicon-time"></span> Posted on <span id="post-pubdate"> August 24, 2013 at 9:00 PM </span></p>
+        <hr></hr>
+        <p id="post-body-id">
+          		<!-- Post Body -->
+        </p>
+        <hr></hr>
+        <div class="well">
+          <h4>Leave a Comment:</h4>
+          <form class="form-horizontal" role="form">
+          	<div class="form-group col-sm-6">
+              <input id="name-input" type="text" class="form-control" placeholder="Your name"/>
+            </div>
+            <div class="form-group col-sm-6">
+              <input id="email-input" type="text" class="form-control" placeholder="Your e-mail"/>
+            </div>
+            <div class="form-group col-sm-12">
+              <textarea id="comment-input" class="form-control" rows="3" placeholder="Your comment"></textarea>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                  <button id="submit-comment-btn" type="button" class="btn btn-blog ">Submit comment</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <hr></hr>
+        <div id="div_comments_id">
+			<p>Aquí deberían mostrarse los comentarios</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end: modal  to  see a post-->
+
+<!-- begin: modal  to  create a post-->
+  <div id="modal_create_post_id" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content container-fluid">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New post</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="textinput">Author</label>
+              <div class="col-sm-10">
+                <input type="text" placeholder="..." class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="textinput">Title of the post</label>
+              <div class="col-sm-10">
+                <input type="text" placeholder="..." class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="textinput">Body</label>
+              <div class="col-sm-10">
+                <textarea style="resize:vertical;" class="form-control" placeholder="..." rows="5" name="comment" required="true"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                  <button type="button" class="btn btn-blog">Publish post</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end: modal  to  create a post-->  	
+  	
+  </body>
+  
+  <script src="../../resources/libraries/jquery/dist/jquery.js" th:href="@{/resources/libraries/jquery/dist/jquery.js}"></script>
+  <script src="../../resources/libraries/bootstrap/dist/js/bootstrap.js" th:href="@{/resources/libraries/bootstrap/dist/js/bootstrap.j}"></script>
+  
+  <script src="../../resources/js/App.js"  th:href="@{/resources/js/App.js}"></script>
+  <script src="../../resources/js/Main.js" th:href="@{/resources/js/Main.js}"></script>
+  <script src="../../resources/js/ModalCreateNew.js" th:href="@{/resources/js/ModalCreateNew.js}"></script>
+  <script src="../../resources/js/ModalShowNew.js" th:href="@{/resources/js/ModalShowNew.js}"></script>
+  <script src="../../resources/js/LoadData.js" th:href="@{/resources/js/LoadData.js}"></script>
+  <script src="../../resources/js/Run.js"  th:href="@{/resources/js/Run.js}"></script>
+
+</html>
